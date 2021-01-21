@@ -1,4 +1,4 @@
-//link of github repository link here
+// https://github.com/molam41/Ass-03
 
 function kilometerToMeter(numOfKilo){
 	if(typeof numOfKilo == "number"){
