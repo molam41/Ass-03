@@ -26,7 +26,7 @@ function budgetCalculator(watch, phone, laptop){
 		}
 		return budget; 		
 	}
-	return "Your input is invalid; plz input 3 decimal numbers only.";
+	return "Your input is invalid; plz input 3 integer numbers only.";
 }
 
 
@@ -50,7 +50,7 @@ function hotelCost(numOfDaysToStay){// first 10 days 100tk, from 11-20 days 80 t
 		}
 		return totalBill;
 	}
-	return "Your input is invalid; Only Decimal & positive number of days are valid here.";	
+	return "Your input is invalid; Only integer & positive number of days are valid here.";	
 }
 
 
