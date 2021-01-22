@@ -34,7 +34,7 @@ function budgetCalculator(watch, phone, laptop){
 
 
 function hotelCost(numOfDaysToStay){// first 10 days 100tk, from 11-20 days 80 tk, from 21 days 50 tk
-	if(typeof numOfDaysToStay == "number" && (numOfDaysToStay - Math.floor(numOfDaysToStay) == 0)){
+	if((typeof numOfDaysToStay == "number") && (numOfDaysToStay - Math.floor(numOfDaysToStay) == 0)){
 		var billFirstTenDays = 100;
 		var billSecondTenDays = 80;
 		var billAfterTwentyDays = 50;
@@ -50,7 +50,7 @@ function hotelCost(numOfDaysToStay){// first 10 days 100tk, from 11-20 days 80 t
 		}
 		return totalBill;
 	}
-	return "Your input is invalid; Only Decimal number of days are valid here.";	
+	return "Your input is invalid; Only Decimal & positive number of days are valid here.";	
 }
 
 
@@ -58,7 +58,7 @@ function hotelCost(numOfDaysToStay){// first 10 days 100tk, from 11-20 days 80 t
 
 function megaFriend(listOfFreind){
 
-	if(Array.isArray(listOfFreind)){		//checking wheter the array of list of friends is array or not.
+	if(Array.isArray(listOfFreind) && listOfFreind.length >0){		//checking wheter the array of list of friends is array or not.
 		var lengthOfEachFriend = [];
 		for(var i =0; i<listOfFreind.length;i++){
 			if(typeof listOfFreind[i] != "string"){	//checking wheter array contains names or not.
@@ -69,8 +69,7 @@ function megaFriend(listOfFreind){
 		var lengthOffriendWithLongName = Math.max.apply(Math, lengthOfEachFriend);
 		var friendWithLongNameIndex = lengthOfEachFriend.indexOf(lengthOffriendWithLongName);
 		var friendWithLongName = listOfFreind[friendWithLongNameIndex];
-
 		return friendWithLongName;		
 	}
-	return "Plz include only friend List. Nothing else is valid here.";
+	return "Plz include only friend List. Number/Empty list is not valid here.";
 }
